@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import B from "./B"
 function A() {
   const [inputVal, setInputVal] = useState("");
   const [text, setText] = useState(inputVal);
@@ -21,6 +21,7 @@ function A() {
         show
       </button>
       <h1>{text}</h1>
+      <B show={text}/>
     </div>
   );
 }

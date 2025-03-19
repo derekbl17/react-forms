@@ -1,0 +1,23 @@
+* {
+  margin: 3px;
+  padding: 2px;
+  background-color: aliceblue;
+}
+.cube {
+  width: 100px;
+  height: 100px;
+}
+.stylin {
+  display: block;
+  background: gray;
+  width: max-content;
+  border-radius: 2px;
+}
+.stylin:hover {
+  color: red;
+}
+.zitaImg {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}

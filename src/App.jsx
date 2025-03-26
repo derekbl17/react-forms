@@ -24,7 +24,7 @@ import { dataLoader } from "./functions/dataLoader";
 import Data from "./components/Data";
 import Router from "./components/Router";
 
-const perPage = 1; //make dynamic from page
+
 
 function App() {
   // const router = createBrowserRouter(
@@ -36,6 +36,7 @@ function App() {
   //     </Route>
   //   )
   // );
+  const [perPage,setPerPage]=useState(1)
   return (
     <BrowserRouter>
       <h1>Router tema</h1>
@@ -61,6 +62,9 @@ function App() {
           {text}
         </Link>
       ))}
+      <Link className="stylin" to="/1">to pages</Link>
+      <label htmlFor="hmPages">how many items per page to show?</label>
+      <input onChange={(e)=>setPerPage(e.target.value<=1?1:e.target.value)} type="number" id="hmPages"/>
       <Routes>
         <Route
           path="/:currentPage"
